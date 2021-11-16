@@ -86,7 +86,7 @@ function renderTable() {
             matchesstate = true ;
         }
         if (countryFilterValue !='' && countryFilterValue === UFO.country.toLowerCase()) { 
-            matchesstate = true ;
+            matchescountry= true ;
         }
         // If the user didn't enter anything in the name field, we will set match to true by default
         if (countryFilterValue== ''){
@@ -99,7 +99,7 @@ function renderTable() {
         if (shapeFilterValue== ''){
             matchesshape = true ;
         }
-        // Will return true if BOTH position and name match
+        // Will return true if all are match
          return matchesdate && matchescity && matchesstate && matchescountry&&matchesshape;
     });
     
